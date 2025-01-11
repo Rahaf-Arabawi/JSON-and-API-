@@ -9,8 +9,8 @@ var myJSON={
 var myJavaScriptObject = JSON.stringify(myJSON);
 console.log(myJavaScriptObject)
 
-// var parsedPerson = JSON.parse(myJSON);
-// console.log(parsedPerson)
+var parsedObject= JSON.parse(myJavaScriptObject);
+console.log(parsedObject)
 
 /****************************/
 /* //2// */
@@ -18,7 +18,6 @@ var myJSON={
     "name":"rahaf",
     "age":"21",
     "email":"rahafaqrabawi2003@gmail.com",
-    "major": "E-Marketing",
 }
 
 function JavaScriptObject(JSONobject){
@@ -30,51 +29,56 @@ console.log(length)
 
 /****************************/
 /* //3// */
-var myJSONArray=[
+var mybook={
+    book:[
         {
          "author":"yusuf sibai",
-         "bookTitle":"land of hypocrisy",
+         "title":"land of hypocrisy",
          "publicationDate":"1962",
         },
         {
          "author":"mustafa lutfi al-manfaluti",
-         "bookTitle":"magdalene",
+         "title":"magdalene",
          "publicationDate":"1912",
         },
         {  
          "author":"ahmad ",
-         "bookTitle":"crazy laila",
+         "title":"crazy laila",
          "publicationDate":"1931",
         },    
     ]
-    console.log(myJSONArray)
+};
+    function getBookTitle(jsonData){
+  return jsonData.book.map(book=>book.title)
+    }
+    console.log(getBookTitle(mybook))
 
 /****************************/
 /* //4// */
-// var student=[
-//     {
-//       "name":"hamza",
-//       "grade":"89",
-//     },
-//     {
-//        "name":"leen",
-//        "grade":"60",
-//     },
-//     {
-//         "name":"noor",
-//         "grade":"50",
-//     },
-//     {
-//         "name":"ahmad",
-//         "grade":"66",
-//     }
-// ]
+var student=[
+    {
+      "name":"hamza",
+      "grade":"89",
+    },
+    {
+       "name":"leen",
+       "grade":"60",
+    },
+    {
+        "name":"noor",
+        "grade":"50",
+    },
+    {
+        "name":"ahmad",
+        "grade":"66",
+    }
+]
 
-//  var total = student.reduce(function(sum, obj){
-//  return sum +parseInt(obj.grade)
-//  },0)
+ var total = student.reduce(function(sum, obj){
+ return sum +parseInt(obj.grade)
+ },0)
 
-// console.log(total)
+console.log(total)
 
 /****************************/
 /* //5// */
@@ -148,7 +152,11 @@ console.log(sortedcity)
 
 /****************************/
 /* //7// */
-
+// var products = Require('./data.json');
+// function calculateTotalRevenue(products){
+// return products.reduce((total,products)=>total+(products.price*products.quantity),0)
+//  }
+//  console.log(calculateTotalRevenue(products))
   
 /****************************/
 /* //8// */
